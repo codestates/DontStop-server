@@ -1,0 +1,3 @@
+DB
+    db에는 다 s가 붙음
+    group_id type: Sequelize.INTEGER
