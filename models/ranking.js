@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   ranking.init({
+    id:{
+      type: DataTypes.NUMBER,
+      primaryKey: true,
+    },
     user_id: DataTypes.INTEGER,
     user_time: DataTypes.DATE,
     user_rank: DataTypes.INTEGER

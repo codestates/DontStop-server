@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   group.init({
+    id:{
+      type: DataTypes.NUMBER,
+      primaryKey: true,
+    },
     user_id: DataTypes.INTEGER,
   }, {
     sequelize,

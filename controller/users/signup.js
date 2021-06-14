@@ -9,16 +9,17 @@ module.exports = {
             }
         })
         if(userInfo) {
-            res.status(404)
-        }
+            res.status(409).send("이메일이 존재합니다")
+        }   
         else {
-            user.create({
+            const newUser = await user.create({
                 name : req.body.name,
                 email : req.body.email,
                 password : req.body.password,
             })
             .then(() => {
-                res.status(201)
+                res.send("ok")
+                res.status(201).json(newUser);
             })
         }
     }

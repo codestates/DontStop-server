@@ -11,19 +11,24 @@ module.exports = {
       user_id: {
         type: Sequelize.INTEGER,
         referebces: { model: "user", key: "id" },
+        allowNull : false,
       },
       group_id: {
         type: Sequelize.INTEGER,
         referebces: { model: "groups", key: "id" },
+        allowNull : false,
       },
       title: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull : false,
       },
       contents: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull : false,
       },
       count: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull : false,
       },
       createdAt: {
         allowNull: false,
