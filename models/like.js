@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   like.init({
+    id:{
+    type: DataTypes.NUMBER,
+    primaryKey: true,
+    },
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     email: DataTypes.STRING

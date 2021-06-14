@@ -11,14 +11,17 @@ module.exports = {
       user_id: {
         type: Sequelize.INTEGER,
         referebces: { model: "user", key: "id" },
+        allowNull : false,
       },
       user_time: {
         type: Sequelize.DATE,
         referebces: { model: "user", key: "time" },
+        allowNull : false,
       },
       user_rank: {
         type: Sequelize.INTEGER,
         referebces: { model: "user", key: "rank" },
+        allowNull : false,
       },
       createdAt: {
         allowNull: false,

@@ -11,12 +11,15 @@ module.exports = {
       user_id: {
         type: Sequelize.INTEGER,
         referebces: { model: "user", key: "id" },
+        allowNull : false,
       },
       title: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull : false,
       },
       contents: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull : false,
       },
       createdAt: {
         allowNull: false,

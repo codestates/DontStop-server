@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   studyPost.init({
+    id:{
+      type: DataTypes.NUMBER,
+      primaryKey: true,
+    },
     user_id: DataTypes.INTEGER,
     group_id: DataTypes.INTEGER,
     title: DataTypes.STRING,

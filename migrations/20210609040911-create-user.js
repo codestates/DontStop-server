@@ -9,23 +9,29 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull : false,
       },
       email: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull : false,
       },
       password: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull : false,
       },
       time: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        allowNull : false,
       },
       rank: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull : false,
       },
       group_id: {
         type: Sequelize.INTEGER,
         referebces: { model: "groups", key: "id" },
+        allowNull : false,
       },
       createdAt: {
         allowNull: false,
