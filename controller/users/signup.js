@@ -2,24 +2,28 @@ const { user } = require('../../models')
 
 module.exports = {
     post: async(req,res) => {
-        console.log(req.body)
+        console.log("req.body :",req.body)
         const userInfo = await user.findOne({
             where : {
                 email : req.body.email,
             }
         })
         if(userInfo) {
-            res.status(409).send("이메일이 존재합니다")
-        }   
+            res.status(409).json({ message : "사용중인 email 입니다!" });
+        }
         else {
-            const newUser = await user.create({
+            user.create({
                 name : req.body.name,
                 email : req.body.email,
                 password : req.body.password,
+                // rank : req.body.rank
             })
-            .then(() => {
-                res.send("ok")
-                res.status(201).json(newUser);
+            .then(() =>{
+                res.status(201).json({
+                    name : req.body.name,
+                    email : req.body.email,
+                    password : req.body.password,
+                });
             })
         }
     }

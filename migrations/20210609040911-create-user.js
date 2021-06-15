@@ -21,17 +21,14 @@ module.exports = {
         allowNull : false,
       },
       time: {
-        type: Sequelize.DATE,
-        allowNull : false,
+        type: Sequelize.INTEGER,
       },
       rank: {
         type: Sequelize.INTEGER,
-        allowNull : false,
       },
       group_id: {
         type: Sequelize.INTEGER,
         referebces: { model: "groups", key: "id" },
-        allowNull : false,
       },
       createdAt: {
         allowNull: false,
