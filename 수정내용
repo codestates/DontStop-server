@@ -13,6 +13,8 @@ api
 Time api에 user_id넣어달라고하기.
 get : userinfo groupname 없애기
 
+npx sequelize-cli db:migrate
+
 {
     "name" : "lee",
     "email" : "aa@aa",
@@ -22,8 +24,7 @@ get : userinfo groupname 없애기
     "title" : "09시부터 03시까지 공부할사람 다 들어와!",
     "contents" : "우리는 쉬지않고 멈추지않고 공부하는 공부를 위한 공부에의한 공부밖에 모르는 공부에 '미 친 자'  "
 }
-npx sequelize-cli db:migrate
 {
-    "id" : "31",
-    "count" : 3
- }
+    "id" : "1",
+    "count" : 2
+}

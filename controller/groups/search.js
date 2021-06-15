@@ -5,13 +5,16 @@ require("dotenv").config();
 
 module.exports = {
     post: async(req, res) => {
-        const accessToken = req.headers.accesstoken;
-        const userInfo = jwt.verify(accessToken, process.env.ACCESS_SECRET);
+        // const accessToken = req.headers.accesstoken;
+        // const userInfo = jwt.verify(accessToken, process.env.ACCESS_SECRET);
+        const authorization = req.headers["authorization"];
+        const token = authorization.split(" ")[1];
+        const userInfo = jwt.verify(token, process.env.ACCESS_SECRET);
 
         const newGroup = await group.create({
             title : req.body.title,
             contents : req.body.contents,
-            count : 3,
+            count : 2,
         })
 
         if(newGroup){
@@ -34,12 +37,15 @@ module.exports = {
         
     },
     get : async(req, res) => {
-        const accessToken = req.headers.accesstoken;
-        const userInfo = jwt.verify(accessToken, process.env.ACCESS_SECRET);
+        // const accessToken = req.headers.accesstoken;
+        // const userInfo = jwt.verify(accessToken, process.env.ACCESS_SECRET);
+        const authorization = req.headers["authorization"];
+        const token = authorization.split(" ")[1];
+        const userInfo = jwt.verify(token, process.env.ACCESS_SECRET);
 
         const groupInfo = await group.findOne({
             where : {
-                group_id : userInfo.group_id,
+                id : userInfo.group_id,
             }
         })
         if(groupInfo){

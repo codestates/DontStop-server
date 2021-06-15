@@ -8,9 +8,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      user_id: {
+      group_id: {
         type: Sequelize.INTEGER,
-        referebces: { model: "user", key: "id" },
+        referebces: { model: "user", key: "group_id" },
+      },
+      user_name : {
+        type: Sequelize.INTEGER,
+        referebces: { model: "user", key: "name" },
       },
       title: {
         type: Sequelize.STRING,

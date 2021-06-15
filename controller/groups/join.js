@@ -5,8 +5,11 @@ require("dotenv").config();
 
 module.exports = {
     post: async(req,res) => {
-        const accessToken = req.headers.accesstoken;
-        const userInfo = jwt.verify(accessToken, process.env.ACCESS_SECRET);
+        // const accessToken = req.headers.accesstoken;
+        // const userInfo = jwt.verify(accessToken, process.env.ACCESS_SECRET);
+        const authorization = req.headers["authorization"];
+        const token = authorization.split(" ")[1];
+        const userInfo = jwt.verify(token, process.env.ACCESS_SECRET);
 
         const joinGroupId = await user.update(
             {
@@ -21,7 +24,7 @@ module.exports = {
                 count : req.body.count - 1
             },
             {
-                where: { id : req.body.id } 
+                where: { id : req.body.id }
             }
         )
 
