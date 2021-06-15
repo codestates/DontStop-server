@@ -1,7 +1,23 @@
-const { group } = require('../../models')
+const { post } = require('../../models')
+const jwt = require('jsonwebtoken');
+require("dotenv").config();
 
 module.exports = {
     get: async(req,res) => {
-        res.end();
+        // const accessToken = req.headers.accesstoken;
+        // const userInfo = jwt.verify(accessToken, process.env.ACCESS_SECRET);
+        const authorization = req.headers["authorization"];
+        const token = authorization.split(" ")[1];
+        const userInfo = jwt.verify(token, process.env.ACCESS_SECRET);
+        // console.log(userInfo)
+
+        const groupList = await post.findAll({
+            where : {
+                group_id : userInfo.group_id
+            }
+        })
+        if(groupList){
+            res.status(200).json(groupList)
+        }
     }
 }

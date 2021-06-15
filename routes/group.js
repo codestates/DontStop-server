@@ -16,6 +16,6 @@ router.post('/join', groupsController.join.post);
 router.get('/list', groupsController.list.get);
 
 // * GET /groups/member
-router.get('/member', groupsController.member.get);
+// router.get('/member', groupsController.member.get);
 
 module.exports = router;
