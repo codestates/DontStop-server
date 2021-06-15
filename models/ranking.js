@@ -19,8 +19,9 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
     },
     user_id: DataTypes.INTEGER,
-    user_time: DataTypes.DATE,
-    user_rank: DataTypes.INTEGER
+    user_rank: DataTypes.INTEGER,
+    user_name : DataTypes.STRING,
+    user_time: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'ranking',

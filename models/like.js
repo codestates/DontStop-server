@@ -18,9 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     type: DataTypes.NUMBER,
     primaryKey: true,
     },
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
-    email: DataTypes.STRING
+    user_id: DataTypes.INTEGER,
+    post_id: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'like',

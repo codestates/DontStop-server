@@ -13,7 +13,7 @@ router.get('/rank', usersController.rank.get);
 router.post('/signup', usersController.signup.post);
 
 // * POST /users/signout
-router.post('/signout', usersController.signout.post);
+// router.post('/signout', usersController.signout.post);
 
 // * POST /users/diary
 router.post('/diary', usersController.diary.post);

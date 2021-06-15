@@ -18,7 +18,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.NUMBER,
       primaryKey: true,
     },
-    user_id: DataTypes.INTEGER,
+    title: DataTypes.STRING,
+    contents: DataTypes.STRING,
+    count: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'group',
