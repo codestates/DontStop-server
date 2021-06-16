@@ -28,6 +28,6 @@ router.get('/info', usersController.info.get);
 router.post('/time', usersController.time.post);
 
 // * GET /users/time
-router.get('/time', usersController.time.get);
+// router.get('/time', usersController.time.get);
 
 module.exports = router;
