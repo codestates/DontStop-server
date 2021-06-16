@@ -17,6 +17,8 @@ get : userinfo groupname 없애기
 
 npx sequelize-cli db:migrate
 
+npx sequelize-cli db:seed:all
+
 {
     "name" : "lee",
     "email" : "aa@aa",

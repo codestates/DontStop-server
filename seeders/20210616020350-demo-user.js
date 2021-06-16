@@ -3,11 +3,11 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('rankings', [{
-      id:"1",
-      user_id: '1',
-      user_rank: '1',
-      user_name: 'a',
-      user_time:'1',
+      id:"2",
+      user_id: '2',
+      user_rank: '2',
+      user_name: 'b',
+      user_time:'2',
       createdAt: new Date(),
       updatedAt: new Date()
     }]);
@@ -17,3 +17,4 @@ module.exports = {
     return queryInterface.bulkDelete('rankings', null, {});
   }
 };
+
