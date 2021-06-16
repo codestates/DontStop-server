@@ -6,9 +6,11 @@ DB
     group이 필요가 없음..
     studyPosts.user_id,group_id 필요없음
     studyPosts를 group으로 바꾸는게 좋을것 같음.
+    post에 user_id를 group_id로 바꾸고 user_name추가
 
 api
     get요청들 headers에 Authorization 추가해달라고하기.
+    groups에 member api 필요없음.
 
 Time api에 user_id넣어달라고하기.
 get : userinfo groupname 없애기
@@ -27,4 +29,8 @@ npx sequelize-cli db:migrate
 {
     "id" : "1",
     "count" : 2
+}
+{
+    "title" : "서버구축",
+    "contents" : "나는 서버 구축이 너무 재밌다 역시 백엔드는 흥미로워 무야호~"
 }

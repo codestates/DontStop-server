@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('rankings', {
+    await queryInterface.createTable('userData', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -11,22 +11,17 @@ module.exports = {
       user_id: {
         type: Sequelize.INTEGER,
         referebces: { model: "user", key: "id" },
-        allowNull : false,
       },
-      user_rank: {
+      group_id: {
         type: Sequelize.INTEGER,
-        referebces: { model: "userData", key: "rank" },
-        allowNull : false,
+        referebces: { model: "group", key: "id" },
       },
-      user_name : {
-        type : Sequelize.STRING,
-        referebces : { model : "user", key : "name"},
-        allowNull : false,
-      },
-      user_time: {
+      time: {
         type: Sequelize.INTEGER,
-        referebces: { model: "userData", key: "time" },
-        allowNull : false,
+        defaultValue : 0
+      },
+      rank: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
@@ -39,6 +34,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('rankings');
+    await queryInterface.dropTable('userData');
   }
 };

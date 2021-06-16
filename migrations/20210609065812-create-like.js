@@ -15,7 +15,7 @@ module.exports = {
       },
       post_id: {
         type: Sequelize.INTEGER,
-        referebces: { model: "posts", key: "id" },
+        referebces: { model: "post", key: "id" },
         allowNull : false,
       },
       createdAt: {

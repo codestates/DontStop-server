@@ -10,10 +10,10 @@ module.exports = {
       },
       group_id: {
         type: Sequelize.INTEGER,
-        referebces: { model: "user", key: "group_id" },
+        referebces: { model: "group", key: "id" },
       },
       user_name : {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         referebces: { model: "user", key: "name" },
       },
       title: {
