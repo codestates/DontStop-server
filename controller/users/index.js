@@ -5,4 +5,5 @@ module.exports = {
     // signout : require('./signout'),
     diary : require('./diary'),
     info : require('./info'),
+    time : require('./time')
 }

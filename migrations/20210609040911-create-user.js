@@ -20,16 +20,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull : false,
       },
-      time: {
-        type: Sequelize.INTEGER,
-      },
-      rank: {
-        type: Sequelize.INTEGER,
-      },
-      group_id: {
-        type: Sequelize.INTEGER,
-        referebces: { model: "groups", key: "id" },
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
