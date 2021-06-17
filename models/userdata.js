@@ -17,7 +17,6 @@ module.exports = (sequelize, DataTypes) => {
     user_id: DataTypes.INTEGER,
     group_id: DataTypes.INTEGER,
     time: DataTypes.INTEGER,
-    rank: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'userData',
