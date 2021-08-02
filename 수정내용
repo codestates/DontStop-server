@@ -36,3 +36,4 @@ npx sequelize-cli db:seed:all
     "title" : "서버구축",
     "contents" : "나는 서버 구축이 너무 재밌다 역시 백엔드는 흥미로워 무야호~"
 }
+process.env.DATABASE_HOST
